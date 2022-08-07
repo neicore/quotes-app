@@ -1,0 +1,152 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.quote-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.quote-card {
+  max-width: 800px;
+  min-width: 300;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin-bottom: 50px;
+  transition: 0.5s;
+}
+
+.author {
+  font-style: italic;
+  margin-top: 30px;
+}
+
+.quote-random {
+  font-size: 1.2rem;
+  background-color: #34d399;
+  color: #fff;
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  margin-bottom: 6rem;
+  transition: 0.5s;
+}
+
+.quote-random:hover {
+  background-color: #34d399c2;
+}
+.quote-random:active {
+  transform: scale(0.97);
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.made {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+
+/* Colors classnames */
+.container-light {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.container-dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.quote-card-light {
+  background-color: #e5e7eb;
+}
+
+.quote-card-dark {
+  background-color: #1f2937;
+}
+
+/* Switcher styles */
+.switcher-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-top: 50px;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 30px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.5s;
+}
+
+input:checked + label {
+  background: #0069d0;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 60px;
+}
