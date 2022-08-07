@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           </button>
         </div>
 
-        <div className="footer">
+        {/* <div className="footer">
           <p>
             Quotes provided by &nbsp;
             <a
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
               Twitter
             </a>
           </div>
-        </div>
+        </div> */}
       </main>
     </div>
   )
