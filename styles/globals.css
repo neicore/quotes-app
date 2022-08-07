@@ -30,7 +30,7 @@
 .quote-card {
   max-width: 800px;
   min-width: 300;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
